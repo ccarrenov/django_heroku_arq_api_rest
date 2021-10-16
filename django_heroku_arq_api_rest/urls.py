@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django_heroku_arq_api_rest.ws.client_controller import client
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/client', client, name="client"),
 ]
