@@ -1,1 +1,1 @@
-web: gunircorn django_heroku_arq.wsgi-prod --log-level debug
+web: gunircorn django_heroku_arq_api_rest.wsgi-prod --log-level debug
