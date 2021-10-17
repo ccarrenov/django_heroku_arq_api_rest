@@ -16,8 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django_heroku_arq_api_rest.ws.client_controller import client
+from rest_framework.schemas import get_schema_view
+
 
 urlpatterns = [
+    path('', get_schema_view(title="ARQ API REST",description="API EXAMPLE",
+    version="1.0.0"), name='home'),    
+    path('openapi', get_schema_view(title="ARQ API REST",description="API EXAMPLE",
+    version="1.0.0"), name='openapi-schema'),
     path('admin/', admin.site.urls),
     path('api/v1/client', client, name="client"),
 ]
